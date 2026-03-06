@@ -1,7 +1,7 @@
 {
-  "name": "my-repository-template",
+  "name": "skills",
   "version": "0.1.0",
-  "description": "GitHubのテンプレートリポジトリ",
+  "description": "Agent Skills for yuzolabs",
   "private": true,
   "packageManager": "bun@1.3.6",
   "trustedDependencies": [

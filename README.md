@@ -1,4 +1,4 @@
-# my-repository-template
+# skills
 
 ## 初期設定
 
@@ -33,8 +33,8 @@ Windows は WSL2 上、Mac の場合は通常の環境にて`opencode auth login
 
 ```txt
 ..
-├── my-repository-template
-└── my-repository-template.worktree
+├── skills
+└── skills.worktree
     ├── feat-branch1
     └── fix-branch2
 ```
