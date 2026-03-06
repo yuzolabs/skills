@@ -1,40 +1,31 @@
 # skills
 
-## 初期設定
+[Japanese README](README_ja.md)
 
-このリポジトリを使用する前に、以下のコマンドを実行してください。
+This repository is a storage place for yuzolabs's personal Agent Skills.
 
-```bash
-bun install --frozen-lockfile
-prek install
-```
+## Agent Skills
 
-### OpenCodeの設定
+This repository contains the following Agent Skills.
 
-このリポジトリでは OpenCode を使うことを前提としているので、`$HOME/.local/share/opencode/auth.json`が存在しないと DevContainer の作成に失敗します。
-Windows は WSL2 上、Mac の場合は通常の環境にて`opencode auth login`による認証を1回以上行ってください。
+### fetch-github-copilot-reviews
 
-もし OpenCode にて認証をしなくても使えるモデルのみを使用する場合は、空ファイルとして作成してください。
+A skill to fetch GitHub Copilot-generated Pull Request reviews.
+Since GitHub Copilot reviews cannot be retrieved with the standard `gh pr` command, this skill internally calls the GitHub API directly to fetch the reviews.
 
-### MCPサーバーのセットアップ
+**Main Features:**
 
-環境変数`CONTEXT7_API_KEY`に Context7の API キーを設定してください。
+- Supports PR numbers or full URLs
+- Filters reviews by Copilot (using bot detection patterns)
+- Retrieves review body and inline comments
+- Structured JSON output
 
-### Dev Containerについて
+### markdown-format
 
-このリポジトリをデフォルトの名前で clone することを想定しています。
-名前を変えると動作しなくなる可能性があります。
+A skill that runs markdownlint-cli2 and textlint repeatedly to format Markdown files.
 
-#### git worktreeについて
+**Main Features:**
 
-このリポジトリは`git worktree`を使用して Dev Container 環境を構築できます。
-
-但し、VSCode 仕様の worktree ディレクトリ構造で作成する必要があります。構造は以下の通りです。
-
-```txt
-..
-├── skills
-└── skills.worktree
-    ├── feat-branch1
-    └── fix-branch2
-```
+- Automatic correction of Markdown syntax errors
+- Japanese style proofreading
+- Identification of issues requiring manual correction
