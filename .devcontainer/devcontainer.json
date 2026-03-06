@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/debian
 {
-	"name": "my-repository-template",
+	"name": "skills",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"build": {
 		"dockerfile": "Dockerfile",
@@ -37,10 +37,10 @@
 	},
 	"mounts": [
 		"source=${localEnv:HOME}/.local/share/opencode/auth.json,target=/home/node/.local/share/opencode/auth.json,type=bind,readonly",
-		"source=${localWorkspaceFolder}/../../my-repository-template,target=/workspaces/my-repository-template,type=bind"
+		"source=${localWorkspaceFolder}/../../skills,target=/workspaces/skills,type=bind"
 	],
-	"workspaceMount": "source=${localWorkspaceFolder}/..,target=/workspaces/my-repository-template.worktrees,type=bind",
-	"workspaceFolder": "/workspaces/my-repository-template.worktrees/${localWorkspaceFolderBasename}",
+	"workspaceMount": "source=${localWorkspaceFolder}/..,target=/workspaces/skills.worktrees,type=bind",
+	"workspaceFolder": "/workspaces/skills.worktrees/${localWorkspaceFolderBasename}",
 	"postStartCommand": "${containerWorkspaceFolder}/.devcontainer/post-start.sh ${localWorkspaceFolderBasename}",
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	"remoteUser": "node"
